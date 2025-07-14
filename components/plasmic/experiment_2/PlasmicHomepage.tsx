@@ -233,22 +233,12 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {
-                        "to deploye application on localhost and see the QUALITY of code which will be generated."
+                        "to deploy application on localhost and see the QUALITY of code which will be generated."
                       }
-                    </li>
-                    <li
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.li,
-                        projectcss.__wab_text,
-                        sty.li__etZcx
-                      )}
-                    >
-                      {""}
                     </li>
                   </ol>
                 }
-                <React.Fragment>{""}</React.Fragment>
+                <React.Fragment>{"\nSo, ready, steady, go!"}</React.Fragment>
               </React.Fragment>
             </div>
           </section>
