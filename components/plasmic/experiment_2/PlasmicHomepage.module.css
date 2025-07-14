@@ -64,6 +64,10 @@
   height: auto;
   min-width: 0;
 }
+.ol {
+  display: flex;
+  flex-direction: column;
+}
 .quickButton:global(.__wab_instance):global(.__wab_instance) {
   max-width: 100%;
   margin-right: 0px;

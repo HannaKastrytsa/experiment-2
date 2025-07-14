@@ -85,6 +85,7 @@ export type PlasmicHomepage__OverridesType = {
   section?: Flex__<"section">;
   h1?: Flex__<"h1">;
   textBlock?: Flex__<"div">;
+  ol?: Flex__<"ol">;
   quickButton?: Flex__<typeof Button>;
   text?: Flex__<"div">;
 };
@@ -183,9 +184,72 @@ function PlasmicHomepage__RenderFunc(props: {
                 "text-block"
               )}
             >
-              {
-                "I would like to change this tex, and see how it will behave after publishing second iteration of this test."
-              }
+              <React.Fragment>
+                <React.Fragment>
+                  {
+                    "With 1st experiment I lose some hope to receive a normal result, but then I noticed in documentation another mode of Plasmic called CodeGen. The first option which I used - called Loader - is the simplest way (for noobs who does not know how to code :-D) to deploy the application directly with API key from Plasmic. This time we will try another (more advanced way):\n\n"
+                  }
+                </React.Fragment>
+                {
+                  <ol
+                    data-plasmic-name={"ol"}
+                    data-plasmic-override={overrides.ol}
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.ol,
+                      sty.ol
+                    )}
+                  >
+                    <li
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.li,
+                        projectcss.__wab_text,
+                        sty.li__bfTwd
+                      )}
+                    >
+                      {
+                        "to publish directly the full code generating from Plasmic to Github"
+                      }
+                    </li>
+                    <li
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.li,
+                        projectcss.__wab_text,
+                        sty.li__mzsZs
+                      )}
+                    >
+                      {
+                        "to pull the project from Github to VS Code with full pages and test components"
+                      }
+                    </li>
+                    <li
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.li,
+                        projectcss.__wab_text,
+                        sty.li__xI157
+                      )}
+                    >
+                      {
+                        "to deploye application on localhost and see the QUALITY of code which will be generated."
+                      }
+                    </li>
+                    <li
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.li,
+                        projectcss.__wab_text,
+                        sty.li__etZcx
+                      )}
+                    >
+                      {""}
+                    </li>
+                  </ol>
+                }
+                <React.Fragment>{""}</React.Fragment>
+              </React.Fragment>
             </div>
           </section>
           <Button
@@ -213,10 +277,11 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "section", "h1", "textBlock", "quickButton", "text"],
-  section: ["section", "h1", "textBlock"],
+  root: ["root", "section", "h1", "textBlock", "ol", "quickButton", "text"],
+  section: ["section", "h1", "textBlock", "ol"],
   h1: ["h1"],
-  textBlock: ["textBlock"],
+  textBlock: ["textBlock", "ol"],
+  ol: ["ol"],
   quickButton: ["quickButton", "text"],
   text: ["text"]
 } as const;
@@ -228,6 +293,7 @@ type NodeDefaultElementType = {
   section: "section";
   h1: "h1";
   textBlock: "div";
+  ol: "ol";
   quickButton: typeof Button;
   text: "div";
 };
@@ -295,6 +361,7 @@ export const PlasmicHomepage = Object.assign(
     section: makeNodeComponent("section"),
     h1: makeNodeComponent("h1"),
     textBlock: makeNodeComponent("textBlock"),
+    ol: makeNodeComponent("ol"),
     quickButton: makeNodeComponent("quickButton"),
     text: makeNodeComponent("text"),
 
