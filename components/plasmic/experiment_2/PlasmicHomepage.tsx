@@ -271,9 +271,10 @@ function PlasmicHomepage__RenderFunc(props: {
             <TextInput
               data-plasmic-name={"textInput"}
               data-plasmic-override={overrides.textInput}
+              autoFocus={false}
               className={classNames("__wab_instance", sty.textInput)}
               disabled={false}
-              inputMode={"tel"}
+              inputMode={"email"}
               inputType={"email"}
               onChange={async (...eventArgs: any) => {
                 generateStateOnChangeProp($state, ["textInput", "value"]).apply(
@@ -290,6 +291,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 }
               }}
               placeholder={"Enter email"}
+              type={"plain"}
               value={generateStateValueProp($state, ["textInput", "value"])}
             />
           </section>
@@ -307,7 +309,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   sty.text
                 )}
               >
-                {"Quick button from library"}
+                {"Send your email"}
               </div>
             }
           />
