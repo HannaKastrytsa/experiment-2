@@ -172,7 +172,14 @@ function PlasmicHomepage__RenderFunc(props: {
                 "h1"
               )}
             >
-              {"2nd test of Plasmic with\u00a0CodeGen option"}
+              <React.Fragment>
+                <span
+                  className={"plasmic_default__all plasmic_default__span"}
+                  style={{ color: "#FF0000" }}
+                >
+                  {"Tralalino tralala balerina Capucina"}
+                </span>
+              </React.Fragment>
             </h1>
             <div
               data-plasmic-name={"textBlock"}
