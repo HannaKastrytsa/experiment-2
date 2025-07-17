@@ -59,6 +59,7 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
+import TextInput from "../../TextInput"; // plasmic-import: jVIt2ZzM_8v2/component
 import Button from "../../Button"; // plasmic-import: rPxWExUUz7m1/component
 
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -86,6 +87,7 @@ export type PlasmicHomepage__OverridesType = {
   h1?: Flex__<"h1">;
   textBlock?: Flex__<"div">;
   ol?: Flex__<"ol">;
+  textInput?: Flex__<typeof TextInput>;
   quickButton?: Flex__<typeof Button>;
   text?: Flex__<"div">;
 };
@@ -130,6 +132,24 @@ function PlasmicHomepage__RenderFunc(props: {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+
+  const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
+    () => [
+      {
+        path: "textInput.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => "example@gmail.com"
+      }
+    ],
+    [$props, $ctx, $refs]
+  );
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: {},
+    $refs
+  });
 
   return (
     <React.Fragment>
@@ -177,7 +197,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   className={"plasmic_default__all plasmic_default__span"}
                   style={{ color: "#FF0000" }}
                 >
-                  {"Tralalino tralala balerina Capucina"}
+                  {"The 3rd attempt to see results"}
                 </span>
               </React.Fragment>
             </h1>
@@ -194,7 +214,7 @@ function PlasmicHomepage__RenderFunc(props: {
               <React.Fragment>
                 <React.Fragment>
                   {
-                    "With 1st experiment I lose some hope to receive a normal result, but then I noticed in documentation another mode of Plasmic called CodeGen. The first option which I used - called Loader - is the simplest way (for noobs who does not know how to code :-D) to deploy the application directly with API key from Plasmic. This time we will try another (more advanced way):\n\n"
+                    "With 1st experiment I lose some hope to receive a normal result, but then I noticed in documentation another mode of Plasmic called CodeGen. The first option which I used - called Loader - is the simplest way to deploy the application directly with API key from Plasmic. This time we will try another (more advanced way):\n\n"
                   }
                 </React.Fragment>
                 {
@@ -248,6 +268,30 @@ function PlasmicHomepage__RenderFunc(props: {
                 <React.Fragment>{"\nSo, ready, steady, go!"}</React.Fragment>
               </React.Fragment>
             </div>
+            <TextInput
+              data-plasmic-name={"textInput"}
+              data-plasmic-override={overrides.textInput}
+              className={classNames("__wab_instance", sty.textInput)}
+              disabled={false}
+              inputMode={"tel"}
+              inputType={"email"}
+              onChange={async (...eventArgs: any) => {
+                generateStateOnChangeProp($state, ["textInput", "value"]).apply(
+                  null,
+                  eventArgs
+                );
+
+                if (
+                  eventArgs.length > 1 &&
+                  eventArgs[1] &&
+                  eventArgs[1]._plasmic_state_init_
+                ) {
+                  return;
+                }
+              }}
+              placeholder={"Enter email"}
+              value={generateStateValueProp($state, ["textInput", "value"])}
+            />
           </section>
           <Button
             data-plasmic-name={"quickButton"}
@@ -274,11 +318,21 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "section", "h1", "textBlock", "ol", "quickButton", "text"],
-  section: ["section", "h1", "textBlock", "ol"],
+  root: [
+    "root",
+    "section",
+    "h1",
+    "textBlock",
+    "ol",
+    "textInput",
+    "quickButton",
+    "text"
+  ],
+  section: ["section", "h1", "textBlock", "ol", "textInput"],
   h1: ["h1"],
   textBlock: ["textBlock", "ol"],
   ol: ["ol"],
+  textInput: ["textInput"],
   quickButton: ["quickButton", "text"],
   text: ["text"]
 } as const;
@@ -291,6 +345,7 @@ type NodeDefaultElementType = {
   h1: "h1";
   textBlock: "div";
   ol: "ol";
+  textInput: typeof TextInput;
   quickButton: typeof Button;
   text: "div";
 };
@@ -359,6 +414,7 @@ export const PlasmicHomepage = Object.assign(
     h1: makeNodeComponent("h1"),
     textBlock: makeNodeComponent("textBlock"),
     ol: makeNodeComponent("ol"),
+    textInput: makeNodeComponent("textInput"),
     quickButton: makeNodeComponent("quickButton"),
     text: makeNodeComponent("text"),
 

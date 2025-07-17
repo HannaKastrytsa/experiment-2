@@ -263,6 +263,71 @@
           "cssFilePath": "plasmic/experiment_2/PlasmicButton.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "zEbP8J2lEf8_",
+          "name": "Label",
+          "type": "managed",
+          "projectId": "noTA7aKy3vvJRvLc2vAqcb",
+          "renderModuleFilePath": "plasmic/experiment_2/PlasmicLabel.tsx",
+          "importSpec": {
+            "modulePath": "Label.tsx"
+          },
+          "cssFilePath": "plasmic/experiment_2/PlasmicLabel.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "jVIt2ZzM_8v2",
+          "name": "TextInput",
+          "type": "managed",
+          "projectId": "noTA7aKy3vvJRvLc2vAqcb",
+          "renderModuleFilePath": "plasmic/experiment_2/PlasmicTextInput.tsx",
+          "importSpec": {
+            "modulePath": "TextInput.tsx"
+          },
+          "cssFilePath": "plasmic/experiment_2/PlasmicTextInput.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "BKsXUSUT_-kG",
+          "name": "TextAreaInput",
+          "type": "managed",
+          "projectId": "noTA7aKy3vvJRvLc2vAqcb",
+          "renderModuleFilePath": "plasmic/experiment_2/PlasmicTextAreaInput.tsx",
+          "importSpec": {
+            "modulePath": "TextAreaInput.tsx"
+          },
+          "cssFilePath": "plasmic/experiment_2/PlasmicTextAreaInput.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "kXIKZzql0ZBq",
+          "name": "Description",
+          "type": "managed",
+          "projectId": "noTA7aKy3vvJRvLc2vAqcb",
+          "renderModuleFilePath": "plasmic/experiment_2/PlasmicDescription.tsx",
+          "importSpec": {
+            "modulePath": "Description.tsx"
+          },
+          "cssFilePath": "plasmic/experiment_2/PlasmicDescription.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "je-pzjKv-O25",
+          "name": "TextField",
+          "type": "managed",
+          "projectId": "noTA7aKy3vvJRvLc2vAqcb",
+          "renderModuleFilePath": "plasmic/experiment_2/PlasmicTextField.tsx",
+          "importSpec": {
+            "modulePath": "TextField.tsx"
+          },
+          "cssFilePath": "plasmic/experiment_2/PlasmicTextField.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [

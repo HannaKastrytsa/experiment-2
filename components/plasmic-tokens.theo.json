@@ -1,6 +1,36 @@
 {
   "props": [
     {
+      "name": "Basic/Border",
+      "type": "color",
+      "value": "#D1D5DB",
+      "category": "color",
+      "meta": {
+        "projectId": "noTA7aKy3vvJRvLc2vAqcb",
+        "id": "Fv_l8_f59WLs"
+      }
+    },
+    {
+      "name": "Basic/Text-Primary",
+      "type": "color",
+      "value": "#030712",
+      "category": "color",
+      "meta": {
+        "projectId": "noTA7aKy3vvJRvLc2vAqcb",
+        "id": "VBFxz-KvzjR2"
+      }
+    },
+    {
+      "name": "Basic/Text-Secondary",
+      "type": "color",
+      "value": "#6B7280",
+      "category": "color",
+      "meta": {
+        "projectId": "noTA7aKy3vvJRvLc2vAqcb",
+        "id": "CqRJfBEw0f_8"
+      }
+    },
+    {
       "name": "Brand/Brand",
       "type": "color",
       "value": "#2563EB",
@@ -241,6 +271,16 @@
       }
     },
     {
+      "name": "Muted/Muted-Soft-Hover",
+      "type": "color",
+      "value": "#E5E7EB",
+      "category": "color",
+      "meta": {
+        "projectId": "noTA7aKy3vvJRvLc2vAqcb",
+        "id": "tRIOXCy20H-U"
+      }
+    },
+    {
       "name": "Neutral/Neutral",
       "type": "color",
       "value": "#374151",
@@ -328,6 +368,16 @@
       "meta": {
         "projectId": "noTA7aKy3vvJRvLc2vAqcb",
         "id": "t8w3uBh2C--G"
+      }
+    },
+    {
+      "name": "Size-32",
+      "type": "spacing",
+      "value": "2rem",
+      "category": "spacing",
+      "meta": {
+        "projectId": "noTA7aKy3vvJRvLc2vAqcb",
+        "id": "tWOR6huXb9QR"
       }
     },
     {
