@@ -23,6 +23,8 @@
   "projects": [
     {
       "projectId": "gmeH6XgPaBtkt51HunAo4g",
+      "style": "tailwind",
+      "scheme": "blackbox",
       "projectApiToken": "LBbn8U2dmbpX9oeuRsYNyEKki39EXydGQgs9vBvR5sLHfGEZsK4owvOj7Q7SnflW4ASIEdLFAeeoxGxXZ8dJtA",
       "projectName": "react-aria",
       "version": ">0.0.0",
