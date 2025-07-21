@@ -197,7 +197,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   className={"plasmic_default__all plasmic_default__span"}
                   style={{ color: "#FF0000" }}
                 >
-                  {"The 3rd attempt to see results"}
+                  {"The 2nd attempt to see results"}
                 </span>
               </React.Fragment>
             </h1>
